@@ -13,7 +13,7 @@ export default function GetData() {
     useEffect(() => {
         const getQuestions = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/ques', { cache: "no-store" });
+                const res = await fetch('/api/ques', { cache: "no-store" });
                 if (!res.ok) {
                     throw new Error('Failed to Fetch Question');
                 }
@@ -46,22 +46,7 @@ export default function GetData() {
 
     }
     
-    //     if (questions.some(q => q._id === questionId && q.selectedOption === null)) {
-    //         const isCorrect = selectedOption === correctOption;
-    //         if (isCorrect) {
-    //             setScore(prevScore => prevScore + 1);
-    //         }
-
-    //         // Update the selected option for the question to prevent further changes
-    //         setQuestions(prevQuestions =>
-    //             prevQuestions.map(q =>
-    //                 q._id === questionId
-    //                     ? { ...q, selectedOption }
-    //                     : q
-    //             )
-    //         );
-    //     }
-    // };
+    //  
 
     const calculateResult = (e) => {
         var totalScore = 0;

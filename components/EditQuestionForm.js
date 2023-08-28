@@ -19,7 +19,7 @@ export default function EditQuestionForm({id, question, option1, option2, option
     const handleSubmit = async (e) =>{
         e.preventDefault()
         try {
-             const res = await fetch(`http://localhost:3000/api/ques/${id}`, {
+             const res = await fetch(`/api/ques/${id}`, {
                 method:"PUT",
                 headers:{
                     "Content-type":"application/json"

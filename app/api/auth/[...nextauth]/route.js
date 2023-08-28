@@ -19,7 +19,9 @@ const authOptions = {
                     await connectMongodb();
                    const userExists = await User.findOne({email})
                    if(!userExists){
-                       const res = await fetch('http://localhost:3000/api/user',{
+                        // const domain = 'https://quiz-postgresql.vercel.app/'
+                        // const local =   'http://localhost:3000/api/user'
+                       const res = await fetch('/api/user',{
                            method:'POST',
                            headers:{
                                "Content-Type":"application/json"

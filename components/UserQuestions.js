@@ -12,7 +12,7 @@ export default function UserQuestions() {
     useEffect(() => {
         const getQuestions = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/ques', { cache: "no-store" });
+                const res = await fetch('/api/ques', { cache: "no-store" });
                 if (!res.ok) {
                     throw new Error('Failed to Fetch Question');
                 }
